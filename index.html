@@ -32,14 +32,14 @@
   
     <h1>Summary</h1>
 
-    <ul>
-      <li id="reaction"><div class="box"><img src="./assets/images/icon-reaction.svg" alt="Reaction icon">Reaction</div><div><span>80</span> /100</div></li>
-      <li id="memory"><div class="box"><img src="./assets/images/icon-memory.svg" alt="Memory icon">Memory</div><div><span>92</span> /100</div></li>
-      <li id="verbal"><div class="box"><img src="./assets/images/icon-verbal.svg" alt="Verbal icon">Verbal</div><div><span>61</span> /100</div></li>
-      <li id="visual"><div class="box"><img src="./assets/images/icon-visual.svg" alt="Visual icon">Visual</div><div><span>72</span> /100</div></li>
+    <ul class="individual-results">
+      <li id="reaction"><div class="box"><img src="./assets/images/icon-reaction.svg" alt="Reaction icon">Reaction</div><div class="sum"><span id="react">80</span>  /100</div></li>
+      <li id="memory"><div class="box"><img src="./assets/images/icon-memory.svg" alt="Memory icon">Memory</div><div class="sum"><span id="memo">92</span>  /100</div></li>
+      <li id="verbal"><div class="box"><img src="./assets/images/icon-verbal.svg" alt="Verbal icon">Verbal</div><div class="sum"><span id="verb">61</span>  /100</div></li>
+      <li id="visual"><div class="box"><img src="./assets/images/icon-visual.svg" alt="Visual icon">Visual</div><div class="sum"><span id="visua">71</span>  /100</div></li>
     </ul>
 
-    <a id="continue" href="#">Continue</a> 
+    <a id="continue" href="indexx.html">Continue</a> 
 
   </section>
 
@@ -48,5 +48,23 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Med-ko">Med-ko</Med-ko></a>.
   </footer>
+  <script>
+    var num1 = parseFloat(localStorage.getItem('num1'));
+    var num2 = parseFloat(localStorage.getItem('num2'));
+    var num3 = parseFloat(localStorage.getItem('num3'));
+    var num4 = parseFloat(localStorage.getItem('num4'));
+
+    var average = parseFloat(localStorage.getItem('average'));
+
+    document.getElementById('react').innerHTML = num1;
+    document.getElementById('memo').innerHTML = num2;
+    document.getElementById('verb').innerHTML = num3;
+    document.getElementById('visua').innerHTML = num4;
+
+    document.getElementById('score').innerHTML = Math.round(average);
+
+
+
+  </script>
 </body>
 </html>
