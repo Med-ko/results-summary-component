@@ -28,16 +28,25 @@ main {
         font-size: 16px;
     }
 
+    main {
+        margin: auto 1em;
+    }
+
     #result, #summary {
         padding: 0.5em 0.5em !important;
     }
 }
 
-@media  screen and (max-width: 425px) {
+@media  screen and (max-width: 465px) {
     main {
         flex-direction: column;
         margin: auto 1em;
         max-width: 375px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    #result {
+        border-radius: 0 0 25px 25px !important;
     }
 }
 
@@ -106,6 +115,8 @@ p {
 #summary {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    border-radius: 25px;
     padding: 1.5em 2.5em;
 }
 
@@ -119,10 +130,16 @@ ul {
 li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border: 1px solid transparent;
     border-radius: 15px;
     padding: 1rem;
     margin-bottom: 1em;
+    color: hsl(0, 0%, 50%);
+}
+
+li span {
+    color: black;
 }
 
 .box {
@@ -182,6 +199,19 @@ li {
 
 #continue:hover {
     background-color: hsl(240, 100%, 50%);
+}
+
+input, button {
+    margin: 0.5em;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:hover {
+    border-color: #032d58;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 .attribution { 
